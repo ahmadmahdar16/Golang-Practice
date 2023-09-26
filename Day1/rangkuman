@@ -1,0 +1,6 @@
+git add . -> untuk menambahkan perubahan yang terjadi pada folder saat ini
+git commit -m "perubahan untuk apa(dalam rangka apa)" -> simpan perubahan
+git status -> menampilkan kondisi folder saat ini
+git log --oneline -> menampilkan history pekerjaan pada folder
+git push origin main -> mengupload perubahan yang terjadi di komputer local ke github
+git pull origin main -> mendownload perubahan dari github ke komputer local
