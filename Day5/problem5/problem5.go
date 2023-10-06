@@ -1,24 +1,36 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
-func pangkat(base, pangkat int) int {
-	for i := 0; i < base; i++ {
-		if base%pangkat == 0 {
-		}
+func pangkat(base, exponent int) int {
+	var isNegative bool
+	var output int
+	output = 1
+
+	if exponent < 0 {
+		isNegative = true
+		exponent = exponent * -1
 	}
-	return 0
+
+	for exponent != 0 {
+		output *= base
+		exponent -= 1
+	}
+
+	if isNegative == true {
+		output = 1 / output
+	}
+
+	return output
 }
 
 func main() {
-	var x int
-	var j int
-	var res = 1
-	fmt.Scanln(&x)
-	fmt.Scanln(&j)
 
-	for i := 0; i < x; i++ {
-		res *= 2
-	}
-	fmt.Println(res)
+	fmt.Println(pangkat(2, 3))
+	fmt.Println(pangkat(5, 3))
+	fmt.Println(pangkat(10, 2))
+	fmt.Println(pangkat(2, 5))
+	fmt.Println(pangkat(7, 3))
 }
