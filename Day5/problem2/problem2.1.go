@@ -4,7 +4,7 @@ import "fmt"
 
 func cariFaktor(bilangan int) []int {
 	faktor := []int{}
-	for i := 1; i <= bilangan; i++ {
+	for i := 1; i <= bilangan-i; i++ {
 		if bilangan%i == 0 {
 			faktor = append(faktor, i)
 		}
