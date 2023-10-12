@@ -17,16 +17,4 @@ func main() {
 	fmt.Println(palindrome("kasur rusak"))
 	fmt.Println(palindrome("kupu-kupu"))
 	fmt.Println(palindrome("lion"))
-
-	var kata string
-	fmt.Scanln(&kata)
-
-	for i := 0; i < len(kata)/2; i++ {
-		if string(kata[i]) != string(kata[len(kata)-1-i]) {
-			fmt.Println("False")
-			return
-		}
-	}
-	fmt.Println("True")
-
 }
